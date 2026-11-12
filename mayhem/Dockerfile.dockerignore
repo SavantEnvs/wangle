@@ -1,0 +1,4 @@
+# Per-Dockerfile ignore for mayhem/Dockerfile: keep the FULL tree (incl. .git and upstream's tracked
+# build/ directory); drop only local build output.
+/mayhem/build-fuzz/
+/mayhem/build-tests/

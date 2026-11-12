@@ -1,0 +1,9 @@
+project: savantenvs/wangle
+target: fuzz_length_field_decoder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_length_field_decoder/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_length_field_decoder
+    libfuzzer: true
+    timeout: 10
