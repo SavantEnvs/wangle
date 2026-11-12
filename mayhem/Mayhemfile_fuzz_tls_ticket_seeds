@@ -1,0 +1,10 @@
+project: savantenvs/wangle
+target: fuzz_tls_ticket_seeds
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tls_ticket_seeds/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tls_ticket_seeds
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_tls_ticket_seeds/fuzz_tls_ticket_seeds.dict

@@ -1,0 +1,10 @@
+project: savantenvs/wangle
+target: fuzz_persistent_cache_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_persistent_cache_load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_persistent_cache_load
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_persistent_cache_load/fuzz_persistent_cache_load.dict
